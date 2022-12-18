@@ -6,16 +6,14 @@ public class Main {
     private static final Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-        ArrayList<Integer> result = new ArrayList();
+
         int N = kb.nextInt();
-
+        int[] result = new int[N];
         for (int i = 0; i < N; i++) {
-            result.add(kb.nextInt());
+            result[i] = kb.nextInt();
         }
-        System.out.print(result.stream().mapToInt(Integer::intValue).min().getAsInt());
-        System.out.print(" ");
-        System.out.print(result.stream().mapToInt(Integer::intValue).max().getAsInt());
-
+        int min = Arrays.stream(result).min().getAsInt();
+        int max = Arrays.stream(result).max().getAsInt();
+        System.out.println(min + " " + max);
     }
-
 }
