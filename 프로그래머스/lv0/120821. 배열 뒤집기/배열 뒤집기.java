@@ -1,11 +1,14 @@
+// import java.util.*는 코드 실행 불가 각각 import 명시 필요
+import java.util.Collections;
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Arrays;
+
 class Solution {
     public int[] solution(int[] num_list) {
-        int[] answer = new int[num_list.length];
+        List<Integer> list = Arrays.stream(num_list).boxed().collect(Collectors.toList());
+        Collections.reverse(list);
         
-        for (int i = 0; i < num_list.length; i++) {
-           answer[i] = num_list[num_list.length - 1 - i];
-        }
-        
-        return answer;
+        return list.stream().mapToInt(Integer::intValue).toArray();
     }
 }
