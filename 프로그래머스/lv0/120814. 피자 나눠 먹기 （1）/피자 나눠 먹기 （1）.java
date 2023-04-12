@@ -1,7 +1,7 @@
 import java.lang.Math.*;
 class Solution {
     public int solution(int n) {
-        if (n < 7) {
+        if (n <= 7) {
             return 1;
         }
         
