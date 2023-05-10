@@ -6,10 +6,7 @@ class Solution {
         String y = String.valueOf(b) + String.valueOf(a);
         int x1 = Integer.parseInt(x);
         int y1 = Integer.parseInt(y);
-        if (x1 >= y1) {
-            return x1;
-        } else {
-            return y1;
-        }
+        
+        return Math.max(x1, y1);
     }
 }
